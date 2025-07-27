@@ -103,6 +103,29 @@ Now that Active Directory Domain Services installed, we're going to promote DC-1
 - Once you've named the root domain mydomain.com just click on next.
 
 
+<table>
+  <tr>
+    <td>
+      <img width="1000" height="1000" alt="image" src="https://github.com/user-attachments/assets/3ac59118-606a-4269-aced-7f180cc7c16a" />
+    </td>
+    <td>
+      <img width="1000" height="1000" alt="image" src="https://github.com/user-attachments/assets/962ba0ca-f11f-426f-b473-e7d54a0c3cc0" />
+    </td>
+  </tr>
+</table>
+
+- Leave everything alone on the Domain Controller Options page.
+- The only thing we will need to do is set a password for the Directory Services Restore Mode (DSRM)
+  - We are likely never going to need it for this labn, so just make the Password, "Password1".
+  - Once you've set the password, click Next >.
+- For DNS Options make sure that "Create DNS delegation" is unchecked and click next.
+- For Additional Options, Paths, and Review Options we can just click on Next >.
+
+<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/b878d61e-f9de-4fc0-b5cf-ccd4f740df3b" />
+
+- Once you've hit Next > on Additional Options, Paths, and Review Options and land on the Prerequisite Check page you can hit install!
+  - Be advised, the computer is going to restart at this point. Now that we have actually turned it into an actual Domain Controller, we have to specify the context to which we want to log into it as.
+
 
 
 ---
@@ -115,21 +138,6 @@ In this lab, we effectively installed Active Directory Domain Services on the DC
 
 
 
-
-
-
-
-
-<table>
-  <tr>
-    <td>
-      <img width="1000" alt="Img1" src="https://i.imgur.com/DJmEXEB.png" />
-    </td>
-    <td>
-      <img width="1000" alt="Img2" src="https://i.imgur.com/DJmEXEB.png" />
-    </td>
-  </tr>
-</table>
 
 
 <table>
