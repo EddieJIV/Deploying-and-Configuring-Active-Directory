@@ -121,7 +121,7 @@ Now that Active Directory Domain Services installed, we're going to promote DC-1
 - For DNS Options make sure that "Create DNS delegation" is unchecked and click next.
 - For Additional Options, Paths, and Review Options we can just click on Next >.
 
-<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/b878d61e-f9de-4fc0-b5cf-ccd4f740df3b" />
+<img width="800" height="800" alt="Install" src="https://github.com/user-attachments/assets/b878d61e-f9de-4fc0-b5cf-ccd4f740df3b" />
 
 - Once you've hit Next > on Additional Options, Paths, and Review Options and land on the Prerequisite Check page you can hit install!
 
@@ -129,7 +129,7 @@ Now that Active Directory Domain Services installed, we're going to promote DC-1
 
 
 <p align="center">
-<img width="526" height="160" alt="image" src="https://github.com/user-attachments/assets/9890558f-9db2-4912-8d18-b547f1633cb4" />
+<img width="526" height="160" alt="mydomain.com" src="https://github.com/user-attachments/assets/9890558f-9db2-4912-8d18-b547f1633cb4" />
 </p>
 
 - So, in order for us to log into the domain going fowards, for the username we have to use mydomain.com, followed by a \ (yes, it MUST be a backslash) then our username.
@@ -141,10 +141,56 @@ Now that Active Directory Domain Services installed, we're going to promote DC-1
 
 <img width="700" height="700" alt="AD UnC" src="https://github.com/user-attachments/assets/e0105cb2-f4b3-49bf-9772-67e967abe93d" />
 
-- In order to do so, navigate to Active Directory Users and Computers within the Windows start menu by either typing it into the search bar or clicking on the Windows Administration Tools dropdown and locating Active Directory Users and Computers.
+- In order to do so, navigate to Active Directory Users and Computers within the Windows start menu by either typing it into the search bar or clicking on the Windows Administration Tools dropdown and locating Active Directory Users and Computers. Be careful not to open the wrong thing :) 
 
 
- 
+<img width="700" height="700" alt="NEW OU" src="https://github.com/user-attachments/assets/b6636f81-cf04-4019-93f0-e46d40b829ea" />
+
+- Locate mydomain.com and right click on the icon indicated above, click on new, then click on Organizational Unit.
+
+<table>
+  <tr>
+    <td>
+      <img width="700" height="700" alt="image" src="https://github.com/user-attachments/assets/73b6cf6d-88b6-437f-ac6a-9f550c87f5f8" />
+    </td>
+    <td>
+      <img width="700" height="700" alt="3 new OUs" src="https://github.com/user-attachments/assets/7e05fcf3-8704-44fa-8441-40fc05ad7585" />
+    </td>
+  </tr>
+</table>
+
+- We are going to name our first organizational unit, _EMPLOYEES
+- Click Ok.
+- Repeat the process for another Organizational Unit called, _ADMINS
+- Finally, make one more OU called _CLIENTS
+
+---
+- We are now going to create a new employee named “Jane Doe” with the username of “jane_admin” / Cyberlab123! and add jane_admin to the “Domain Admins” Security Group.
+
+<img width="700" height="700" alt="image" src="https://github.com/user-attachments/assets/d7b7adcf-8483-49e2-a114-607b7e5bab2e" />
+
+- Left click on mydomain.com
+- Right click on _ADMINS, click New, then Click User.
+
+<table>
+  <tr>
+    <td>
+      <img width="700" height="700" alt="Jane create 1" src="https://github.com/user-attachments/assets/1dd8bebd-8e09-4ba2-bddb-2870477dcfde" />
+    </td>
+    <td>
+      <img width="700" height="700" alt="Jane create 2" src="https://github.com/user-attachments/assets/cd7d34a0-d837-45b1-824c-9906ef254c81" />
+    </td>
+  </tr>
+</table>
+
+- Make our new Admins name Jane Doe, with a username of Jane_admin
+- Click Next >
+- For our password, we will use Cyberlab123!
+- Uncheck the box that says "User must change password at next logon
+- Although it is not safe or smart to do in real life, for this lab, we are going to check the box that says "Password never expires"
+- Click Next >
+- Then click Finish!
+
 
 
 
@@ -160,6 +206,20 @@ In this lab, we effectively installed Active Directory Domain Services on the DC
 
 
 
+
+
+<table>
+  <tr>
+    <td>
+      <img width="1000" alt="Img1" src="https://i.imgur.com/DJmEXEB.png" />
+    </td>
+    <td>
+      <img width="1000" alt="Img2" src="https://i.imgur.com/DJmEXEB.png" />
+    </td>
+  </tr>
+</table>
+
+
 <table>
   <tr>
     <td>
@@ -355,36 +415,4 @@ In this lab, we effectively installed Active Directory Domain Services on the DC
   </tr>
 </table>
 
-<table>
-  <tr>
-    <td>
-      <img width="1000" alt="Img1" src="https://i.imgur.com/DJmEXEB.png" />
-    </td>
-    <td>
-      <img width="1000" alt="Img2" src="https://i.imgur.com/DJmEXEB.png" />
-    </td>
-  </tr>
-</table>
 
-
-<table>
-  <tr>
-    <td>
-      <img width="1000" alt="Img1" src="https://i.imgur.com/DJmEXEB.png" />
-    </td>
-    <td>
-      <img width="1000" alt="Img2" src="https://i.imgur.com/DJmEXEB.png" />
-    </td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <td>
-      <img width="1000" alt="Img1" src="https://i.imgur.com/DJmEXEB.png" />
-    </td>
-    <td>
-      <img width="1000" alt="Img2" src="https://i.imgur.com/DJmEXEB.png" />
-    </td>
-  </tr>
-</table>
