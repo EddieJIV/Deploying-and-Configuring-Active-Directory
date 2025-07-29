@@ -190,9 +190,40 @@ Now that Active Directory Domain Services installed, we're going to promote DC-1
 - Although it is not safe or smart to do in real life, for this lab, we are going to check the box that says "Password never expires"
 - Click Next >
 - Then click Finish!
+---
+This account is not an Admin yet just because we named it Jane_admin and put it in the admin OU. What makes this account a domain admin is by adding the newly created account to the built in Domain Admin Security Group. 
+
+<img width="auto" height="auto" alt="Janes acct properties" src="https://github.com/user-attachments/assets/f0960b97-3ed3-4df6-aa08-f8e5e49cd50c" />
 
 
+- Left click on the _ADMINS folder, locate our new user Jane Doe.
+- Right click on her account.
+- Navigate to and left click on properties.
+- Within Jane Doe Properties, click on "Member Of"
+- Then, once inside "Member of" click on Add.
 
+<table>
+  <tr>
+    <td>
+      <img width="700" height="700" alt="precheck" src="https://github.com/user-attachments/assets/321c05fd-2b5f-4d09-94fc-e9bd6e9dea9c" />
+    </td>
+    <td>
+      <img width="700" height="700" alt="Post check name" src="https://github.com/user-attachments/assets/af3c7dee-59d8-467c-a6b5-6888db00020a" />
+
+    </td>
+  </tr>
+</table>
+
+- Once you've clicked add, type, "Domain Admins" into the Object names text box and click on Check Names
+- If you've done this correctly it should "find" the name and underline it, like so.
+- Click OK.
+
+<img width="460" height="539" alt="image" src="https://github.com/user-attachments/assets/e73cf0d1-c505-415c-8b64-165c763176fa" />
+
+- Click Apply.
+- Then click OK.
+And NOW, this account is a Domain Admin!
+- Lets log out of DC-1, and log back in as our newly created user Jane Doe (Jane_admin)
 
 ---
 Rough Draft Conclusion:
@@ -208,16 +239,6 @@ In this lab, we effectively installed Active Directory Domain Services on the DC
 
 
 
-<table>
-  <tr>
-    <td>
-      <img width="1000" alt="Img1" src="https://i.imgur.com/DJmEXEB.png" />
-    </td>
-    <td>
-      <img width="1000" alt="Img2" src="https://i.imgur.com/DJmEXEB.png" />
-    </td>
-  </tr>
-</table>
 
 
 <table>
