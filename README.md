@@ -124,7 +124,27 @@ Now that Active Directory Domain Services installed, we're going to promote DC-1
 <img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/b878d61e-f9de-4fc0-b5cf-ccd4f740df3b" />
 
 - Once you've hit Next > on Additional Options, Paths, and Review Options and land on the Prerequisite Check page you can hit install!
-  - Be advised, the computer is going to restart at this point. Now that we have actually turned it into an actual Domain Controller, we have to specify the context to which we want to log into it as.
+
+## ⚠ Be advised, once the installation is complete, DC-1 is going to restart, and now that we've promoted it into an actual Domain Controller, we'll have to specify the context to which we want to log into it as going foward. ⚠
+
+
+<p align="center">
+<img width="526" height="160" alt="image" src="https://github.com/user-attachments/assets/9890558f-9db2-4912-8d18-b547f1633cb4" />
+</p>
+
+- So, in order for us to log into the domain going fowards, for the username we have to use mydomain.com, followed by a \ (yes, it MUST be a backslash) then our username.
+  - What this effectively will look like when logging back into DC-1 for the first time following the promotion to DC, is:
+  - username: mydomain.com\labuser
+  - password: Cyberlab123!
+---
+- Once you've logged back into DC-1 in with your new credentials as lab user we are now going to create a Domain Admin user within the domain.
+
+<img width="700" height="700" alt="AD UnC" src="https://github.com/user-attachments/assets/e0105cb2-f4b3-49bf-9772-67e967abe93d" />
+
+- In order to do so, navigate to Active Directory Users and Computers within the Windows start menu by either typing it into the search bar or clicking on the Windows Administration Tools dropdown and locating Active Directory Users and Computers.
+
+
+ 
 
 
 
