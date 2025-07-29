@@ -134,7 +134,7 @@ Now that Active Directory Domain Services installed, we're going to promote DC-1
 
 - So, in order for us to log into the domain going fowards, for the username we have to use mydomain.com, followed by a \ (yes, it MUST be a backslash) then our username.
   - What this effectively will look like when logging back into DC-1 for the first time following the promotion to DC, is:
-  - username: mydomain.com\labuser
+  - username: mydomain.com\(account name)
   - password: Cyberlab123!
 ---
 - Once you've logged back into DC-1 in with your new credentials as lab user we are now going to create a Domain Admin user within the domain.
@@ -209,7 +209,6 @@ This account is not an Admin yet just because we named it Jane_admin and put it 
     </td>
     <td>
       <img width="700" height="700" alt="Post check name" src="https://github.com/user-attachments/assets/af3c7dee-59d8-467c-a6b5-6888db00020a" />
-
     </td>
   </tr>
 </table>
@@ -225,43 +224,94 @@ This account is not an Admin yet just because we named it Jane_admin and put it 
 And NOW, this account is a Domain Admin!
 - Lets log out of DC-1, and log back in as our newly created user Jane Doe (Jane_admin)
 
+## ⚠ From now on, we are going to be logging into DC-1 as our newly created Admin, so keep her login credentials handy for this lab ⚠ 
+
+*and the following several labs as well!*
+
+- Domain Admin Account:
+  - user: mydomain.com\jane_admin
+  - password: Cyberlab123!
+
+<img width="auto" height="auto" alt="Janes first admin login" src="https://github.com/user-attachments/assets/0c618510-35d3-45ea-b3ef-4968ff1c2d5f" />
+
+- Reconnect to DC-1 with Jane_admins login information.
+
 ---
-Rough Draft Conclusion:
+
+- The next thing we're going to do is join Client-1 to the domain.
+- In order to do so, log into Client-1 as the original local admin, labuser, if you havent already done so at the start of this lab.
+- So you will have both VM's open. The DC-1 will be logged into with Jane_admin, and Client-1 will be logged into as labuser.
+
+<img width="700" height="700" alt="Client-1 System" src="https://github.com/user-attachments/assets/03c2aeaf-c364-4fc2-95ff-158dbbf6512f" />
+
+- In Client-1, type about in the search bar.
+- Verify it is in-fact Client-1 youre operating on by double checking the Windows specifications
+- Then click on Rename this PC (advanced) on the right-hand side of the page.
+
+<table>
+  <tr>
+    <td>
+     <img width="700" height="700" alt="Change" src="https://github.com/user-attachments/assets/94d08ce1-a087-4af6-8bea-9e751618f9fe" />
+    </td>
+    <td>
+      <img width="700" height="700" alt="Member of" src="https://github.com/user-attachments/assets/706fc5dc-0cc2-4481-aefa-d400ae58c51c" />
+    </td>
+  </tr>
+</table>
+
+- Under the Computer Name tab, click on Change...
+- Under Member of, click on the Domain bullet, and this is where we join it to the domain, so put mydomain.com
+- Click OK
+
+<img width="700" height="700" alt="Join!" src="https://github.com/user-attachments/assets/ea352842-d514-4877-ac7c-6288fc4870d2" />
+
+
+
+- Because we set the DNS settings on this to use DC-1's private IP address, its able to locate the Domain Controller for the mydomain.com domain
+- Additionally, since we gave Jane-admin the correct permissions and privlidges, we can enter her account information here to join our domain.
+
+<img width="296" height="147" alt="image" src="https://github.com/user-attachments/assets/50e3457f-dd9d-476f-8fa0-5618c9508060" />
+
+- If you minimize the settings window we've been working in you should see the pop-up welcoming Client-1 to your domain!
+- At this point you will be prompted to restart, so click OK, then click close on System properties if you need to still, and you'll be able to restart Client-1.
+  
+---
+- For the final step of this lab, we are going to go back into DC-1, verify that Client-1 shows up under Active Directory Users and Computers, and move it into the _CLIENTS Organizational Unit we created earlier!
+
+<img width="507" height="357" alt="image" src="https://github.com/user-attachments/assets/ef6b7814-931b-4a28-bf31-b5b4b1e6c80f" />
+
+- So, back in DC-1, search Active Directory Users and Computers in the search bar or you can find it under Windows Administrative Tools in the Start menu.
+
+- Expand mydomain.com and click on Computers, and you should now see Client-1.
+
+<table>
+  <tr>
+    <td>
+      <img width="700" height="700" alt="Move warning" src="https://github.com/user-attachments/assets/90837e12-9081-45c7-9964-86b80109ec08" />
+    </td>
+    <td>
+      <img width="700" height="700" alt="Moved to _CLIENTS" src="https://github.com/user-attachments/assets/e7bcbe7c-80cd-4eee-aa52-67fbc9f641a2" />
+    </td>
+  </tr>
+</table>
+
+
+- Left click and drag Client-1 into the _CLIENTS Organizational Unit.
+  - Once you do so, you will be prompted with a warning, say Yes.
+
+
+# Rough Draft Conclusion:
 In this lab, we effectively installed Active Directory Domain Services on the DC-1 server, promoted it to a domain controller with a new forest (mydomain.com), created organizational units and user accounts, and then joined a client machine (Client-1) to the domain. Finally, we organized the clients in Active Directory! 
 
+
+Paragraph about what the next lab's going to entail.
 ---
 
+Should add parts about stopping the VMs to save money
 
 
 
 
-
-
-
-
-
-
-<table>
-  <tr>
-    <td>
-      <img width="1000" alt="Img1" src="https://i.imgur.com/DJmEXEB.png" />
-    </td>
-    <td>
-      <img width="1000" alt="Img2" src="https://i.imgur.com/DJmEXEB.png" />
-    </td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <td>
-      <img width="1000" alt="Img1" src="https://i.imgur.com/DJmEXEB.png" />
-    </td>
-    <td>
-      <img width="1000" alt="Img2" src="https://i.imgur.com/DJmEXEB.png" />
-    </td>
-  </tr>
-</table>
 
 
 <table>
