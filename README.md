@@ -298,12 +298,6 @@ And NOW, this account is a Domain Admin!
 
 - Left click and drag Client-1 into the _CLIENTS Organizational Unit.
   - Once you do so, you will be prompted with a warning, say Yes.
-
-
-# Rough Draft Conclusion:
-In this lab, we effectively installed Active Directory Domain Services on the DC-1 server, promoted it to a domain controller with a new forest (mydomain.com), created organizational units and user accounts, and then joined a client machine (Client-1) to the domain. Finally, we organized the clients in Active Directory!
-
-
 ---
 
 ## Conclusion
