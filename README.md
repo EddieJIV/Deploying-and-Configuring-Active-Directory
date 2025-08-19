@@ -301,12 +301,17 @@ And NOW, this account is a Domain Admin!
 
 
 # Rough Draft Conclusion:
-In this lab, we effectively installed Active Directory Domain Services on the DC-1 server, promoted it to a domain controller with a new forest (mydomain.com), created organizational units and user accounts, and then joined a client machine (Client-1) to the domain. Finally, we organized the clients in Active Directory! 
+In this lab, we effectively installed Active Directory Domain Services on the DC-1 server, promoted it to a domain controller with a new forest (mydomain.com), created organizational units and user accounts, and then joined a client machine (Client-1) to the domain. Finally, we organized the clients in Active Directory!
 
 
-Paragraph about what the next lab's going to entail.
 ---
 
-Should add parts about stopping the VMs to save money
+## Conclusion
+
+In this lab, we successfully installed and configured Active Directory Domain Services on DC-1, promoted it to a domain controller with a new forest, mydomain.com, and set up organizational units (_EMPLOYEES, _ADMINS, _CLIENTS) to organize resources effectively. We created a Domain Admin account and used it to manage user privileges, then joined a client machine (Client-1) to the domain and verified its placement in ADUC.
+
+While this lab focused on the core steps for deploying Active Directory and connecting clients, Active Directory offers a wide array of administrative capabilities, including group policy management, advanced security configuration, and automation via PowerShell.
+
+**Reminder:** When you are finished with this lab, be sure to pause your virtual machines in Azure to avoid unnecessary costs. We will continue to use DC-1 and Client-1 in the next lab, so do not delete them. Just stop them until you’re ready to continue on to the next lab! You only pay for compute while VMs are running. Storage (the OS disks) remains, but the cost is minimal compared to leaving VMs powered on. You can safely resume your VMs when you’re ready to continue.
 
 
