@@ -312,6 +312,8 @@ In this lab, we successfully installed and configured Active Directory Domain Se
 
 While this lab focused on the core steps for deploying Active Directory and connecting clients, Active Directory offers a wide array of administrative capabilities, including group policy management, advanced security configuration, and automation via PowerShell.
 
+I hope you'll join me in the next lab where we further our intuition and understanding of these enviorments, skills, and topics!
+
 **Reminder:** When you are finished with this lab, be sure to pause your virtual machines in Azure to avoid unnecessary costs. We will continue to use DC-1 and Client-1 in the next lab, so do not delete them. Just stop them until you’re ready to continue on to the next lab! You only pay for compute while VMs are running. Storage (the OS disks) remains, but the cost is minimal compared to leaving VMs powered on. You can safely resume your VMs when you’re ready to continue.
 
 
